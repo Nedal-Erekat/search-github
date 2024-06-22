@@ -1,18 +1,14 @@
-import SearchBox from "@/components/search-box/page";
 import styles from "./page.module.css";
+import SearchBox from "@/components/search-box";
 
 export default function Home() {
-  
 
   return (
     <>
-    <header>
-      <SearchBox/>
-    </header>
-    <main className={styles.main}>
-
-      
-    </main>
+      <header></header>
+      <main className={styles.main}>
+        <SearchBox/>
+      </main>
     </>
   );
 }
