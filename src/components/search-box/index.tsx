@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, Suspense, useState } from "react";
 import SearchInput from "../search-input/page";
 import UserList from "../usersList.tsx";
 import useDebounce from "@/hooks/useDebounce";
@@ -16,7 +16,9 @@ const SearchBox = () => {
   return (
     <>
       <SearchInput handleSearchQuery={handleSearchQuery} query={query} />
+    <Suspense fallback={<h2>Loading...</h2>}>
       <UserList query={debounceQuery} />
+    </Suspense>
     </>
   );
 };

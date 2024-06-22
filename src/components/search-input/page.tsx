@@ -22,6 +22,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
         onChange={handleSearchQuery}
         className={styles.searchInput}
         placeholder="Search GitHub users"
+        autoFocus
       />
     </div>
   );
